@@ -42,4 +42,4 @@ node ./src/test/test.js 실행시 postman 으로 테스트가 가능합니다.
 테스트는 
   3000포트 
   post 요청, /d, /w, 
-  json body 에 각 keyword, sentense 입력 해주시면 됩니다.
+  json body 에 각 keyword, sentence 입력 해주시면 됩니다.
