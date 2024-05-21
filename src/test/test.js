@@ -12,7 +12,7 @@ app.post('/w', (req, res) => {
 });
 
 app.post('/d', (req, res) => {
-    let result = docSimilarity(req.body.word);
+    let result = docSimilarity(req.body.sentence);
     res.send(result);
 });
 

@@ -6,7 +6,7 @@ const fs = require('fs');
  * 파일 read
  */
 const textPath = './src/data/morphemeTarget/';
-const dataPath = './src/data/morphemeVector/';
+const dataPath = './src/data/vector/';
 const vectorFileName = 'vector.txt';
 const indexFileName = 'index.txt';
 
