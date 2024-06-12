@@ -62,6 +62,19 @@ function gradient(softmaxed, index) {
     return softmaxed.map((value, i) => value - (i === index ? 1 : 0));
 }
 
+// 전체손실함수
+function crossEntropyLoss(softmaxedArray, indexArray) {
+    if (softmaxedArray.length !== indexArray.length) {
+        throw new Error('softmaxedArray and indexArray must have the same length');
+    }
+
+    let totalLoss = 0;
+    for (let i = 0; i < softmaxedArray.length; i++) {
+        totalLoss += crossEntropy(softmaxedArray[i], indexArray[i]);
+    }
+    return totalLoss / softmaxedArray.length;
+}
+
 // 학습 데이터 정확도, 손실값
 function crossEntropy(softmaxed, index) {
     return -Math.log(softmaxed[index] + Number.EPSILON);
